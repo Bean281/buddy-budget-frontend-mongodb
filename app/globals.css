@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary - Green */
+    --primary: 142.1 76.2% 36.3%;
+    --primary-foreground: 355.7 100% 97.3%;
+
+    /* Secondary - Light gray/blue */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    /* Muted - Light gray */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* Accent - Light gray */
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    /* Destructive - Red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border & Input */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+
+    /* Finance-specific semantic colors */
+    --income: 142.1 76.2% 36.3%;
+    --income-foreground: 0 0% 100%;
+    --income-muted: 142.1 76.2% 96%;
+
+    --expense: 0 84.2% 60.2%;
+    --expense-foreground: 0 0% 100%;
+    --expense-muted: 0 84.2% 96%;
+
+    --savings: 221.2 83.2% 53.3%;
+    --savings-foreground: 0 0% 100%;
+    --savings-muted: 221.2 83.2% 96%;
+
+    --investment: 262.1 83.3% 57.8%;
+    --investment-foreground: 0 0% 100%;
+    --investment-muted: 262.1 83.3% 96%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 38 92% 96%;
+
+    --success: 142.1 76.2% 36.3%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142.1 76.2% 96%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    --info-muted: 199 89% 96%;
+
+    /* Category-specific colors */
+    --category-food: 24.6 95% 53.1%;
+    --category-entertainment: 262.1 83.3% 57.8%;
+    --category-shopping: 221.2 83.2% 53.3%;
+    --category-coffee: 35.5 91.7% 51.4%;
+    --category-housing: 158.1 64.4% 39.2%;
+    --category-transportation: 0 84.2% 60.2%;
+    --category-utilities: 198.6 88.7% 48.4%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Lighter Green in dark mode */
+    --primary: 142.1 70.6% 45.3%;
+    --primary-foreground: 144.9 80.4% 10%;
+
+    /* Secondary - Darker gray/blue */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted - Darker gray */
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Accent - Darker gray */
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive - Muted red for dark mode */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    /* Border & Input */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+
+    /* Finance-specific semantic colors - adjusted for dark mode */
+    --income: 142.1 70.6% 45.3%;
+    --income-foreground: 0 0% 100%;
+    --income-muted: 142.1 70.6% 15%;
+
+    --expense: 0 72.2% 50.6%;
+    --expense-foreground: 0 0% 100%;
+    --expense-muted: 0 72.2% 15%;
+
+    --savings: 217.2 91.2% 59.8%;
+    --savings-foreground: 0 0% 100%;
+    --savings-muted: 217.2 91.2% 15%;
+
+    --investment: 263.4 70% 50.4%;
+    --investment-foreground: 0 0% 100%;
+    --investment-muted: 263.4 70% 15%;
+
+    --warning: 37.7 92.1% 50.2%;
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 37.7 92.1% 15%;
+
+    --success: 142.1 70.6% 45.3%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 142.1 70.6% 15%;
+
+    --info: 198.6 93.2% 59.6%;
+    --info-foreground: 0 0% 100%;
+    --info-muted: 198.6 93.2% 15%;
+
+    /* Category-specific colors - adjusted for dark mode */
+    --category-food: 20.5 90.2% 48.2%;
+    --category-entertainment: 263.4 70% 50.4%;
+    --category-shopping: 217.2 91.2% 59.8%;
+    --category-coffee: 31.8 93.1% 47.8%;
+    --category-housing: 160.1 84.1% 39.4%;
+    --category-transportation: 0 72.2% 50.6%;
+    --category-utilities: 198.6 93.2% 59.6%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Finance-specific utility classes */
+.income-gradient {
+  @apply bg-gradient-to-r from-income to-income/80;
+}
+
+.expense-gradient {
+  @apply bg-gradient-to-r from-expense to-expense/80;
+}
+
+.savings-gradient {
+  @apply bg-gradient-to-r from-savings to-savings/80;
+}
+
+.investment-gradient {
+  @apply bg-gradient-to-r from-investment to-investment/80;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:shadow-md hover:-translate-y-1;
+}
+
+.stat-card {
+  @apply rounded-xl border bg-card p-4 shadow-sm;
+}
+
+/* Category-specific utility classes */
+.category-food {
+  @apply bg-[hsl(var(--category-food))];
+}
+
+.category-entertainment {
+  @apply bg-[hsl(var(--category-entertainment))];
+}
+
+.category-shopping {
+  @apply bg-[hsl(var(--category-shopping))];
+}
+
+.category-coffee {
+  @apply bg-[hsl(var(--category-coffee))];
+}
+
+.category-housing {
+  @apply bg-[hsl(var(--category-housing))];
+}
+
+.category-transportation {
+  @apply bg-[hsl(var(--category-transportation))];
+}
+
+.category-utilities {
+  @apply bg-[hsl(var(--category-utilities))];
+}
+
+/* Add smooth transitions for theme changes */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
