@@ -8,6 +8,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { useState } from "react"
 import { Toaster } from "@/components/ui/toaster"
+import { Analytics } from "@/components/analytics"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           >
             {children}
             <Toaster />
+            <Analytics />
             <ReactQueryDevtools initialIsOpen={false} />
           </ThemeProvider>
         </QueryClientProvider>
